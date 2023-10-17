@@ -18,9 +18,14 @@
         </nav>
 
         <main>
-
-            <div class="foto">
-                <img src="https://i.pinimg.com/564x/29/61/21/296121f58da16bafb22506813ea86735.jpg" alt="foto Wedding 1" width="100%" height="100%">
+            <div class="slideshow-container">
+                 <ul class="slides" style="height: 100% ;">
+                    <li><img src="assets/slideshow/01.jpg"></li>
+                    <li><img src="assets/slideshow/02.jpeg"></li>
+                    <li><img src="assets/slideshow/03.jpeg"></li>
+                    <li><img src="assets/slideshow/04.jpeg"></li>
+                    <li><img src="assets/slideshow/05.jpg"></li>
+                </ul>
             </div>
 
             <div class="isi">
@@ -38,13 +43,32 @@
                 <p>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
             </div>
 
-            
+
 
         </main>
 
         <footer>
 
         </footer>
+
+        <script type="text/javascript">
+            const slides = document.querySelector('.slides');
+            const slideListItems = document.querySelectorAll('.slides li');
+            let currentSlide = 0;
+
+            function showSlide(slideIndex) {
+                slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideListItems.length;
+                showSlide(currentSlide);
+            }
+
+            setInterval(nextSlide, 3000);
+
+        </script>
+
     </body>
 
 
