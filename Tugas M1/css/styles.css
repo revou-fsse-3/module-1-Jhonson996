@@ -1,22 +1,15 @@
-body{
-    margin: auto;
-    padding: auto;
-}
-
-main{
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    top: 6%;
-
-
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Header bagian Navigasi */
     .navigasi {
         position: fixed;
-        z-index: 1;
+        z-index: 99;
         top: 0;
+        height: 50px;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -24,37 +17,37 @@ main{
         justify-content: center;
         list-style-type: none;
         overflow: hidden;
-        background-color: #b3ffb3;
+        background-color: rgb(199, 233, 176) ;
     }
 
-    nav li {
+    .navigasi li {
         float: left;
     }
 
-    nav li a {
+    .navigasi li a {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 0 10px;
         display: block;
         color: black;
         text-align: center;
-        padding: 14px 16px;
+        padding: 15px 16px;
         text-decoration: none;
     }
 
-    nav li a:hover {
-        background-color: #1aff8c;
-        border-radius: 20%;
+    .navigasi li a:hover {
+        background-color: rgb(179, 201, 156);
     }
-
-
 
 /*Bagian Kiri (Foto)*/
     .slideshow-container {
         max-width : 60%;
-        margin: auto;
+        margin: 0 auto;
         height: 100%;
-        background-color: gray;
         float: left;
         position: fixed;
         overflow: hidden;
+        padding-top: 50px;
     }
 
     .slides {
@@ -65,22 +58,41 @@ main{
         transition: transform 0.8s ease;
     }
 
-    .slides li {
+    .slides li, .slides img {
         min-width: 100%;
         min-height: 100%;
     }
 
-    .slides img {
-        min-width: 100%;
-        min-height: 100%
-    }
-
-
-
 /*Sebelah kanan*/
-    .isi{
+    .content{
         width : 40%;
         height: auto;
-        background-color: lightsteelblue;
-        float: right   ;
+        margin-top: 50px;
+        background-color: rgba(221, 255, 187, .7);
+        float: right;
+        background-image: url("../assets/001.png");
+        background-size: contain;
+        background-repeat: no-repeat;   
+    }
+
+    .date {
+
+        font-weight: bold;
+        font-size: 2em;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        padding-right: 15%;
+        padding-left: 15%;
+        background-image: url("../assets/002.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    .date p{
+        margin: 5px 0;
     }
