@@ -40,7 +40,7 @@
     }
 
 /*Bagian Kiri (Foto)*/
-    .slideshow-container {
+    .container {
         max-width : 60%;
         margin: 0 auto;
         height: 100%;
@@ -48,17 +48,13 @@
         position: fixed;
         overflow: hidden;
         padding-top: 50px;
-    }
-
-    .slides {
         list-style: none;
         margin: 0;
         padding: 0;
-        /* display: flex;
-        transition: transform 0.8s ease; */
+        display: flex;
     }
 
-    .slides li, .slides img {
+    .container img {
         min-width: 100%;
         min-height: 100%;
     }
