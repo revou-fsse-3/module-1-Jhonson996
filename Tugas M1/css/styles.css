@@ -65,30 +65,91 @@
         height: auto;
         margin-top: 50px;
         background-color: rgba(221, 255, 187, .7);
-        float: right;
-        background-image: url("../assets/001.png");
-        background-size: contain;
-        background-repeat: no-repeat;   
+        float: right; 
     }
 
-    .date {
+    .content, .maps {
+        background-image: url("../assets/001.png");
+        background-size: contain;
+        background-repeat: no-repeat;  
+    }
 
+    .date, .collection{
+        margin: 5px 0;
         font-weight: bold;
         font-size: 2em;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        flex-direction: column;
-        padding-right: 15%;
-        padding-left: 15%;
         background-image: url("../assets/002.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
     }
 
-    .date p{
-        margin: 5px 0;
+
+    .date, .word, .collection, .maps{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+
+    .nama, .word p {
+        text-align: center;
+        font-size: 1.7em;   
+        align-items: center;
+        justify-content: center;
+    }
+
+    .word {
+        font-style: italic ;
+        /* background-image: url("../assets/Image/line-01.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom; */
+    }
+
+    .word img{
+        width: 60%;
+        padding: 20px;
+    }
+
+    .collection{
+        flex-direction: row;
+    }
+
+
+    .foto{
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .list-foto{
+        width: 90%;
+        height: 100%;
+        
+    }
+
+    .foto img{
+        width: 100%;
+        height: auto;   
+        border: 2px solid #000;
+        border-radius: 10%;
+    }
+
+/* Iframe Maps */
+
+    .frame{
+        padding-top: 40%;
+    }
+
+    .maps p{
+        padding-top: 5%;
+        font-size: 2em;
     }
