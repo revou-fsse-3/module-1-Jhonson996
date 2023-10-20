@@ -110,7 +110,11 @@
 
         <script>
                 function myFunction() {
-                    alert("Submited");
+                    
+                    const fullName = document.getElementById('full_name').value;
+
+                    alert(`Thank you, ${fullName}! For your Attendance.`);
+
                     form.reset();
                 }
         </script>
