@@ -85,7 +85,7 @@
     }
 
 
-    .date, .word, .collection, .maps{
+    .date, .word, .collection, .maps, .formm{
         height: 100vh;
         display: flex;
         align-items: center;
@@ -152,4 +152,64 @@
     .maps p{
         padding-top: 5%;
         font-size: 2em;
+    }
+
+/* Form Attendance */
+    .formm {
+        height: 100vh;
+        margin: auto;
+    }
+
+    form{
+        margin: auto;
+        padding: 15px;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="radio"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    #no{
+        margin-left: 20px;
+    }
+
+    textarea {
+        resize: none;
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    .btnsubmit{
+        text-align: right;
+    }
+
+    button {
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        font-size: 18px;
     }
