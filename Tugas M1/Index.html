@@ -3,67 +3,77 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="./src/css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <title>Wedding Invitation</title>
     </head>
 
-    <body>
+    <body> 
         <nav>
-            <ul class="navigasi">
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#couple">Couple</a></li>
-                <li><a href="#image">Image</a></li>
-                <li><a href="#Location">Location</a></li>
-            </ul>
+            <button id="btn-nav">
+                    <img src="./assets/icon/nav-icon.png" alt="icon Navbar" width="20vw">
+                    Menu
+            </button>
+            <section class="navigasi">
+                <p>Ed Sheer &#10084; Keith</p>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#couple">Story</a></li>
+                    <li><a href="#image">Image</a></li>
+                    <li><a href="#Location">Location</a></li>
+                </ul>
+            </section>
         </nav>
 
         <main>
-            <div class="container">
+            <div class="img-sideleft">
                 <img src="assets/slideshow/04.jpeg" alt="gambar prewed sisi kiri">
             </div>
 
-            <div class="content">
-                <div class="date">
+            <div class="content" id="home">
+                <div class="bride">
                     <div class="nama">
-                        <p>ED SHEER</p>
-                        <p>&</p>
-                        <p>KEITH</p>
+                        <p>Ed Sheer</p>
+                        <p>&#10084</p>
+                        <p>Keith</p>
                     </div>
-                    <br>
-                    <p>Saturday</p>
-                    <p>December 21, 2024</p>
+                    <div class="date">
+                        <p>Saturday,</p>
+                        <p>December 21, 2024</p>
+                        <p style="margin-top: 20px;">Maldieve</p>
+
+                        <br>
+
+                        <p style="font-size: 3rem; text-shadow: 3px 3px 5px grey;">&#11167;</p>
+                    </div>
                 </div>
 
-                <div id="couple" class="word">
+                <div id="couple" class="bride-quote">
                     <img src="assets/Image/line-01.png">
                     <p>"Two lives, two hearts, joined together in friendship, united forever in love. You're cordially invited to the wedding of Ed Sheer and Keith.</p>
                     <img src="assets/Image/line-01.png">
                 </div>
 
-                <div id="Image" class="collection">
+                <div id="image" class="collection">
                     <div class="foto">
                         <div class="list-foto">
                             <img src="assets/Image/image-01.jpeg" alt="gambar prewed">
                         </div>
-
                         <div class="list-foto">
                             <img src="assets/Image/image-02.jpeg" alt="gambar prewed">
                         </div>
-
                         <div class="list-foto">
                             <img src="assets/Image/image-03.jpeg" alt="gambar prewed">
                         </div>
+
                     </div>
                     <div class="foto">
                         <div class="list-foto">
                             <img src="assets/Image/image-04.jpeg" alt="gambar prewed">
                         </div>
-
                         <div class="list-foto">
                             <img src="assets/Image/image-05.jpeg" alt="gambar prewed">
                         </div>
-
                         <div class="list-foto">
                             <img src="assets/Image/image-06.jpeg" alt="gambar prewed">
                         </div>
@@ -74,13 +84,12 @@
                     <iframe 
                         class="frame"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9988.829689203925!2d73.08999453450154!3d-0.6071675965626031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x24b59f84718a48af%3A0x245be39225de10cd!2sHithadhoo%20Swimming%20Track!5e0!3m2!1sen!2sid!4v1697728202681!5m2!1sen!2sid" 
-                        width="90%" 
+                        width="90%"
                         height="50%" 
-                        style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <p>Location</p>
+                    <p>Wedding Location</p>
                 </div>
 
                 <div class="formm">
@@ -93,30 +102,20 @@
                         <input type="radio" id="yes" name="attendance" value="yes" required>
                         <label for="yes">Yes</label>
 
-                        <input type="radio" id="no" name="attendance" value="no" required>
+                        <input type="radio" id="no" name="attendance" value="no" style="margin-left: 20px" required>
                         <label for="no">No</label><br><br>
                         
                         <label for="wishes">Wishes for the Bride:</label>
                         <textarea id="wishes" name="wishes" rows="4" required></textarea>
-                        <div class="btnsubmit">
+                        <div class="btnsubmit" style="text-align: right;">
                             <button type="submit" onclick="myFunction()">Submit</button>
                         </div>
                     </form>
                 </div>
-
-
             </div>
+
         </main>
 
-        <script>
-                function myFunction() {
-                    
-                    const fullName = document.getElementById('full_name').value;
-
-                    alert(`Thank you, ${fullName}! For your Attendance.`);
-
-                    form.reset();
-                }
-        </script>
+        <script src="./src/js/js.js"></script>
     </body>
 </html>

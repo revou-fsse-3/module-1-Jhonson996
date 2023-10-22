@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigasi */
+    nav {
+        z-index: 1;
+        width: 20rem; 
+        height: 100%;
+        background-color: rgba(221, 255, 187, .5);
+        position: fixed;
+        top: 0;
+        left: -20rem; 
+        transition: left 0.3s;
+        /* transition: marginleft 0.3s; */
+    }   
+
+    .navigasi {
+        margin-top: 10vh;
+        width: 100%;
+    }
+
+    .navigasi p{
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-decoration: underline;
+    }   
+
+    .navigasi ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .navigasi ul li {
+        padding: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .navigasi ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.7rem;
+    }
+
+    .navigasi ul li a:hover{
+        text-shadow: 2px 2px 4px grey;
+    }
+
+    #btn-nav {
+        width: 90px;
+        display: flex;
+        color: black;
+        background-color: rgb(199, 233, 176);
+        border: none;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #btn-nav img{
+        margin: 0 5px;
+    }
+
+/* image left */
+    .img-sideleft{
+        max-width : 60%;
+        margin: auto;
+        height: 100%;
+        float: left;
+        position: fixed;
+        overflow: hidden;
+    }
+    
+    .img-sideleft img{
+        max-width: 100%;
+        margin: auto;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+
+/*Right side*/
+    .content{
+        width : 40%;
+        height: auto;
+        float: right; 
+        background-color: rgb(221, 255, 187);
+    }
+
+/* tiap tab View height 100% */
+    .bride, .bride-quote, .collection, .maps, .formm{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+/* Background image top and bottom */
+    .content, .maps {
+        background-image: url("../../assets/001.png");
+        background-size: contain;
+        background-repeat: no-repeat;  
+    }
+
+    .bride, .collection{
+        background-image: url("../../assets/002.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+/* class bride */
+    .nama{
+        margin-bottom: 20px;
+    }
+
+    .nama p{
+        font-size: 3.5rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    
+    .date p{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+
+/* Bride Quote */
+    .bride-quote p {
+        text-align: center;
+        font-size: 1.7rem;   
+        align-items: center;
+        justify-content: center;
+        font-style: italic ;
+    }
+
+    .bride-quote img{
+        width: 60%;
+        padding: 15px;
+    }
+
+/* Collection */
+    .collection{
+        /* flex-direction: row; */
+        background-color: rgba(255, 255, 255, .5);
+        flex-direction: unset;
+    }
+
+    .foto{
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .list-foto{
+        width: 90%;
+        height: 100%;
+    }
+
+    .foto img{
+        width: 100%;
+        margin: .4rem 0;
+        height: auto;   
+        border: 2px solid #000;
+        border-radius: 6%;
+        box-shadow: 2px 2px 10px rgb(79, 79, 79);
+    }
+
+/* Iframe Maps */
+
+    .frame{
+        margin-top: 8rem;
+        border: 0;
+        box-shadow: 4px 4px 15px rgb(79, 79, 79) ;
+    }
+
+    .maps p{
+        padding-top: 3%;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+/* Form Attendance */
+    form{
+        margin: auto;
+        padding: 15px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 4px 4px 15px rgb(79, 79, 79);
+    }
+
+    label {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    input[type="text"],
+    input[type="radio"] {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    textarea {
+        resize: none;
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        font-size: 1.1rem;
+    }
+
+
+
+/* Max-width 960 */
+    @media (max-width: 960px) {
+        *{
+            font-size: 14px;
+        }
+        .navigasi ul li {
+            font-size: 2rem;
+            padding: 0.2rem;
+            margin-left: 1rem;
+        }
+
+        .img-sideleft{
+            clear: both;
+            max-width : 100%;
+            margin: auto;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+/* width and height */
+        .content{
+            width : 100%;
+        }
+
+        .bride-quote, .formm, .maps{
+            height: 60vh;
+        }
+
+/* Bride Quote */
+        .bride-quote p, .maps p{
+            font-size: 1.1rem;
+        }
+        
+/* nama */
+        .nama{
+            margin-bottom: 20px;
+        }
+    
+        .nama p{
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+        }
+        
+        .date p{
+            font-size: 2rem;
+            text-align: center;
+        }
+
+/* Image */
+        .collection{
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            padding: .8rem;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .foto{
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        .list-foto{
+            width: 80%;
+            height: 100%;
+        }
+    
+        /* .foto img{
+            width: 100%;
+            margin: .4rem 0;
+            height: auto;   
+            border: 2px solid #000;
+            border-radius: 6%;
+            box-shadow: 2px 2px 10px rgb(79, 79, 79);
+        } */
+
+}
