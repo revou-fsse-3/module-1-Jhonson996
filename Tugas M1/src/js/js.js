@@ -1,9 +1,10 @@
 const btnNav = document.getElementById('btn-nav');
-const navBar = document.querySelector('nav');
+const headerNav = document.querySelector('header');
 const main = document.querySelector('main');
+const content = document.querySelector('.content');
 
 btnNav.addEventListener('click', () => {
-    if (navBar.style.left === '0px') {
+    if (headerNav.style.left === '0px') {
         closeNavBar();
     } else {
         openNavBar();
@@ -12,14 +13,16 @@ btnNav.addEventListener('click', () => {
 
 // Function to open the navigation bar
 function openNavBar() {
-    navBar.style.left = '0';
+    headerNav.style.left = '0';
     main.style.marginLeft = '20rem';
+    content.style.marginRight = '-10rem';
 }
 
 // Function to close the navigation bar
 function closeNavBar() {
-    navBar.style.left = '-20rem';
     main.style.marginLeft = '0';
+    headerNav.style.left = '-20rem';
+    content.style.marginRight = '0';
 }
 
 // Close the navigation bar when a menu item is clicked

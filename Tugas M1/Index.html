@@ -10,12 +10,12 @@
     </head>
 
     <body> 
-        <nav>
+        <header>
             <button id="btn-nav">
                     <img src="./assets/icon/nav-icon.png" alt="icon Navbar" width="20vw">
-                    Menu
+                    <span>Menu</span>
             </button>
-            <section class="navigasi">
+            <nav>
                 <p>Ed Sheer &#10084; Keith</p>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -23,16 +23,16 @@
                     <li><a href="#image">Image</a></li>
                     <li><a href="#Location">Location</a></li>
                 </ul>
-            </section>
-        </nav>
+            </nav>
+        </header>
 
         <main>
-            <div class="img-sideleft">
-                <img src="assets/slideshow/04.jpeg" alt="gambar prewed sisi kiri">
-            </div>
+            <section class="img-sideleft">
+                <img src="assets/slideshow/00.jpg" alt="gambar prewed sisi kiri">
+            </section>
 
-            <div class="content" id="home">
-                <div class="bride">
+            <section class="content" id="home">
+                <section class="bride">
                     <div class="nama">
                         <p>Ed Sheer</p>
                         <p>&#10084</p>
@@ -41,47 +41,50 @@
                     <div class="date">
                         <p>Saturday,</p>
                         <p>December 21, 2024</p>
-                        <p style="margin-top: 20px;">Maldieve</p>
+                        <p style="margin-top: 20px;">Maldives</p>
 
                         <br>
 
                         <p style="font-size: 3rem; text-shadow: 3px 3px 5px grey;">&#11167;</p>
                     </div>
-                </div>
+                </section>
 
-                <div id="couple" class="bride-quote">
+                <section id="couple" class="bride-quote">
                     <img src="assets/Image/line-01.png" alt="Hiasan background">
                     <p>"Two lives, two hearts, joined together in friendship, united forever in love. You're cordially invited to the wedding of Ed Sheer and Keith.</p>
                     <img src="assets/Image/line-01.png" alt="Hiasan background">
-                </div>
-
-                <div id="image" class="collection">
-                    <div class="foto">
-                        <div class="list-foto">
-                            <img src="assets/Image/image-01.jpeg" alt="gambar prewed">
+                </section>
+                
+                <section class="collection">
+                    <p class="sub-title">Collection</p>
+                    <div id="image" class="flex-container">
+                        <div class="foto">
+                            <!-- <div class="list-foto"> -->
+                                <img src="assets/Image/image-01.jpeg" alt="gambar prewed">
+                            <!-- </div>
+                            <div class="list-foto"> -->
+                                <img src="assets/Image/image-02.jpeg" alt="gambar prewed">
+                            <!-- </div>
+                            <div class="list-foto"> -->
+                                <img src="assets/Image/image-03.jpeg" alt="gambar prewed">
+                            <!-- </div> -->
                         </div>
-                        <div class="list-foto">
-                            <img src="assets/Image/image-02.jpeg" alt="gambar prewed">
+                        <div class="foto">
+                            <!-- <div class="list-foto"> -->
+                                <img src="assets/Image/image-04.jpeg" alt="gambar prewed">
+                            <!-- </div>
+                            <div class="list-foto"> -->
+                                <img src="assets/Image/image-05.jpeg" alt="gambar prewed">
+                            <!-- </div>
+                            <div class="list-foto"> -->
+                                <img src="assets/Image/image-06.jpeg" alt="gambar prewed">
+                            <!-- </div> -->
                         </div>
-                        <div class="list-foto">
-                            <img src="assets/Image/image-03.jpeg" alt="gambar prewed">
-                        </div>
-
                     </div>
-                    <div class="foto">
-                        <div class="list-foto">
-                            <img src="assets/Image/image-04.jpeg" alt="gambar prewed">
-                        </div>
-                        <div class="list-foto">
-                            <img src="assets/Image/image-05.jpeg" alt="gambar prewed">
-                        </div>
-                        <div class="list-foto">
-                            <img src="assets/Image/image-06.jpeg" alt="gambar prewed">
-                        </div>
-                    </div>
-                </div>
+                </section>
 
-                <div id="Location" class="maps">
+                <section id="Location" class="maps">
+                    <p class="sub-title">Location</p>
                     <iframe 
                         title="Maps Lokasi"
                         class="frame"
@@ -91,11 +94,13 @@
                         allowfullscreen="" 
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <p>Wedding Location</p>
-                </div>
+                    <p>Maldives</p>
+                </section>
 
-                <div class="formm">
+                <section class="formm">
+                    <p class="sub-title">Attendance Form</p>
                     <form id="attendance-form">
+
                         <label for="full_name">Full Name:</label>
                         <input type="text" id="full_name" name="full_name" required>
                         
@@ -109,14 +114,26 @@
                         
                         <label for="wishes">Wishes for the Bride:</label>
                         <textarea id="wishes" name="wishes" rows="4" required></textarea>
+
                         <div class="btnsubmit" style="text-align: right;">
                             <button type="submit" onclick="myFunction()">Submit</button>
                         </div>
-                    </form>
-                </div>
-            </div>
 
+                    </form>
+
+                    <div>
+
+                    </div>
+
+                </section>
+
+                <footer>
+                    <p>FOOTER</p>
+                </footer>
+            </section>
         </main>
+
+
 
         <script src="./src/js/js.js"></script>
     </body>
