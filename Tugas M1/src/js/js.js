@@ -1,7 +1,5 @@
 const btnNav = document.getElementById('btn-nav');
 const headerNav = document.querySelector('header');
-const main = document.querySelector('main');
-const content = document.querySelector('.content');
 
 btnNav.addEventListener('click', () => {
     if (headerNav.style.left === '0px') {
@@ -14,15 +12,11 @@ btnNav.addEventListener('click', () => {
 // Function to open the navigation bar
 function openNavBar() {
     headerNav.style.left = '0';
-    main.style.marginLeft = '20rem';
-    content.style.marginRight = '-10rem';
 }
 
 // Function to close the navigation bar
 function closeNavBar() {
-    main.style.marginLeft = '0';
     headerNav.style.left = '-20rem';
-    content.style.marginRight = '0';
 }
 
 // Close the navigation bar when a menu item is clicked
@@ -37,13 +31,41 @@ menuItems.forEach((item) => {
 
 
 
+// tes
+function submitForm() {
+    // Mendapatkan nilai dari inputan
+    var fullName = document.getElementById("full_name").value;
+    var attendance = document.querySelector('input[name="attendance"]:checked').value;
+    var wishes = document.getElementById("wishes").value;
 
-// alert
-function myFunction() {
-                    
-    const fullName = document.getElementById('full_name').value;
+    // Membuat elemen div pembungkus untuk menampilkan hasil input
+    var listDiv = document.createElement("div");
+    listDiv.className = "list-attendance";
+    
+    // Membuat elemen untuk menampilkan hasil input
+    var listItem0 = document.createElement("div");
+    listItem0.className = "nama-attend";
+    listItem0.innerHTML = fullName;
+
+    var listItem1 = document.createElement("div");
+    listItem1.className = "attend-y-n";
+    listItem1.innerHTML = "Attendance : " + attendance;
+
+    var listItem2 = document.createElement("div");
+    listItem2.className = "wishes-attend";
+    listItem2.innerHTML = "Wishes : " + wishes;
+
+    // Menambahkan elemen-elemen ke dalam div pembungkus
+    listDiv.appendChild(listItem0);
+    listDiv.appendChild(listItem1);
+    listDiv.appendChild(listItem2);
+
+  // Menambahkan div pembungkus ke daftar kehadiran
+    var attendanceList = document.getElementById("attendance-list");
+    attendanceList.appendChild(listDiv);
 
     alert(`Thank you, ${fullName}! For your Attendance.`);
 
-    form.reset();
-}
+    // Reset formulir
+    document.getElementById("attendance-form").reset();
+  }

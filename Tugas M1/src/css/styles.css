@@ -3,27 +3,40 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
-
-main{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "header konten"
-    "header footer";
+audio{
+    display: none;
 }
+
+/* grid */
+    body{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto auto;
+    }
+
+    aside{
+        grid-row: 1/2;
+    }
+
+    main{
+        grid-column: 2/3;
+    }
+
+    footer{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
 
 /* Navigasi */
     header {
         z-index: 1;
         width: 20rem; 
         height: 100%;
-        background-color: rgba(241,195,195, .5);
+        background-color: rgba(241,195,195, .8);
         position: fixed;
         top: 0;
         left: -20rem; 
         transition: left 0.3s;
-        /* transition: marginleft 0.3s; */
     }   
 
     nav {
@@ -44,8 +57,8 @@ main{
     }
 
     nav ul li {
-        padding: 1rem;
-        margin-left: 1rem;
+        padding: 1rem  1.8rem;
+        margin: 0 .2rem;
     }
     
     nav ul li a {
@@ -54,24 +67,26 @@ main{
         font-size: 1.7rem;
     }
 
-    nav ul li a:hover{
+    nav ul li:hover{
         text-shadow: 2px 2px 4px grey;
+        font-weight: 800;
+        background-color: rgba(232,75,108, .5);
+        border-left-style: solid;
     }
 
     #btn-nav {
         width: 90px;
+        margin: 10px 0 0 10px;
+        padding: 10px;
         display: flex;
         color: black;
-        background-color: rgb(252,216,216);
-        border: none;
-        padding: 10px;
+        font-weight: 800;
+        background-color: rgba(255,255,255,.5);
+        border-radius: 10px;
         position: fixed;
         top: 0;
         left: 0;
-        margin-top: 10px;
-        margin-left: 10px;
         cursor: pointer;
-        border-radius: 10px;
         align-items: center;
         text-align: center;
         justify-content: center;
@@ -101,22 +116,19 @@ main{
 /*Right side*/
     .content{
         display: grid;
-        grid-area: konten;
         background-color: rgba(241,195,195);
     }
     /* BG COLOR */
     .collection, .formm{
         background: linear-gradient(to top, rgba(0,0,0,0) 50%, rgba(255,220,218,1));
-        /* background-color: rgb(255,220,218); */
     }
 
     .bride-quote, .maps{
         background: linear-gradient(to bottom, rgba(0,0,0,0) 1%, rgba(255,220,218,1));
     }
 
-
 /* tiap tab View height 100% */
-    .bride, .bride-quote, .maps, .formm, footer{
+    .bride, .bride-quote, .maps{
         height: 100vh;
         padding: 0 10%;
         display: flex;
@@ -125,17 +137,26 @@ main{
         flex-direction: column;
     }
 
+/* Sub title ukuran */
+    .sub-title{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+    }
+
 /* Background image top and bottom */
     .content {
         background-image: url("../../assets/002.png") ;
-        background-size: 15em;
+        background-size: 15vw;
         background-repeat: no-repeat;
         background-position: top left;
     }
 
     .bride{
         background-image: url("../../assets/001.png") ;
-        background-size: 18rem;
+        background-size: 17vw;
         background-repeat: no-repeat;
         background-position: bottom  right;
         
@@ -152,15 +173,30 @@ main{
         text-align: center;
     }
     
+    @keyframes love-color {
+        0% {color: rgb(182, 22, 54);}
+        25%   {color: rgb(232,75,108);}
+        50%  {color: rgb(237, 111, 137);}
+        100% {color: rgb(182, 22, 54);}
+      }
+
+    .nama #icon-love{
+        animation-name: love-color;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
     .date p{
         font-size: 2rem;
         text-align: center;
     }
 
+    .date #icon-down{
+        font-size: 3rem; 
+        text-shadow: 3px 3px 5px grey;
+    }
 
 /* Bride Quote */
-    
-
     .bride-quote p {
         text-align: center;
         font-size: 1.7rem;   
@@ -187,10 +223,6 @@ main{
 
     .collection p{
         display: block;
-        margin-bottom: 1rem;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 700;
     }
 
     .flex-container{
@@ -208,14 +240,6 @@ main{
         max-height: 100%;
     }
 
-    .list-foto{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        height: 100%;
-    }
-
     .foto img{
         width: 80%;
         height: auto;
@@ -223,39 +247,39 @@ main{
         border: 2px solid #000;
         border-radius: 6%;
         box-shadow: 2px 2px 10px rgb(79, 79, 79);
+        transition: transform .2s;
     }
 
-    .sub-title{
-        margin-bottom: 1rem;
-        text-align: center;
-        font-weight: 700;
-        font-size: 2rem;
-        text-decoration: underline;
+    .foto img:hover{
+        transform: scale(1.2);
     }
 
 /* Iframe Maps */
     .maps p:nth-last-child(1){
         margin-top: 2rem;
         font-size: 2rem;
-        text-shadow: 2px 2px 5px black;
+        font-weight: bolder;
     }
 
     .frame{
-        /* margin-top: 8rem; */
         border: 0;
         box-shadow: 4px 4px 15px rgb(79, 79, 79) ;
     }
 
-
-    /* Form Attendance */
-    
+/* Form Attendance */
     .formm{
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         justify-content: flex-start;
-        padding-top: 1.5rem;
+        padding: 3rem 0;
     }
 
     form{
         padding: 15px;
+        width: 80%;
         border-radius: 5px;
         background: rgba(255, 255, 255, 0.6);
         box-shadow: 4px 4px 15px rgb(79, 79, 79);
@@ -307,23 +331,77 @@ main{
         box-shadow: 2px 2px 7px black;
     }
 
+/* list attendance */
+    .list-attendance{
+        margin-top: 30px;
+        display: flex;
+        width: 80%;
+        align-items: left;
+        justify-content: left;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 4px 4px 15px rgb(79, 79, 79);
+    }
 
-/* Footer */
-    footer{
-        display: grid;
-        grid-area: footer;
-        background-color: rgba(241,195,195);
+    #attendance-list {
+        height: auto;
+        box-sizing: border-box;
+        display: flex;
+        margin-top: 1rem;
+        /* align-items: left; */
+        /* justify-content: left; */
+        flex-direction: column;
+        justify-content: flex-start;
+        /* padding: 3rem 0; */
     }
 
 
+/* Footer */
+    footer{
+        display: inline;
+        height: 50vh;
+        background-color: rgba(241,195,195);
+        /* align-items: center;
+        justify-content: center;
+        flex-direction: column; */
+    }
+
+    footer section{
+        background-color: rgba(255,255,255,.5);
+        box-sizing: border-box;
+        padding:  2rem;
+        width: 100%;
+        position: relative;
+        top: 25%;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer img{
+        width: 20vw;
+        margin: 1rem 0;
+    }
+
+    footer p{
+        font-size: 1.2vw;
+        margin-bottom: .5rem;
+        text-align: center;
+    }
 
 
 
 /* Max-width 960 */
     @media (max-width: 960px) {
-
     *{
         font-size: 14px;
+    }
+
+    body{
+        display: flex;
+        display: flex;
+        flex-direction: column;
     }
 
     /* Grid to Flex */
@@ -357,8 +435,13 @@ main{
             overflow: hidden;
             background: linear-gradient(to bottom, rgba(0,0,0,0) 5%, rgba(241,195,195,1));
         }
+        
         aside img{
             z-index: -1;
+        }
+
+        .content, .bride{
+            background-size: 14em;
         }
 
     /* general */
@@ -373,7 +456,26 @@ main{
             width : 100%;
         }
 
-        .formm, .maps{
+        .maps{
             height: 60vh;
+        }
+
+        .formm{
+            height: auto;
+            padding: 3rem 0;
+        }
+
+    /* footer */
+        footer{
+            padding: 0 10% ;
+        }
+
+        footer img{
+            width: 50vw;
+            margin: 1rem 0;
+        }
+    
+        footer p{
+            font-size: 3vw;
         }
 }

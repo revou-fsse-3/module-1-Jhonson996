@@ -26,26 +26,27 @@
             </nav>
         </header>
 
-        <main>
-            <aside class="imgleft">
-                <img src="assets/slideshow/00.jpg" alt="gambar prewed sisi kiri">
-            </aside>
+        <audio controls loop autoplay>
+            <source src="./assets/music/audio.mpeg" type="audio/mpeg">
+        </audio>
 
+        <aside class="imgleft">
+            <img src="assets/slideshow/00.jpg" alt="gambar prewed sisi kiri">
+        </aside>
+
+        <main>
             <div class="content" id="home">
                 <div class="bride">
                     <section class="nama">
                         <p>Ed Sheer</p>
-                        <p>&#10084;</p>
+                        <p id="icon-love">&#10084;</p>
                         <p>Keith</p>
                     </section>
                     <section class="date">
                         <p>Saturday,</p>
                         <p>December 21, 2024</p>
                         <p style="margin-top: 20px;">Maldives</p>
-
-                        <br>
-
-                        <p style="font-size: 3rem; text-shadow: 3px 3px 5px grey;">&#11167;</p>
+                        <p id="icon-down">&#11167;</p>
                     </section>
                 </div>
 
@@ -104,24 +105,30 @@
                         <textarea id="wishes" name="wishes" rows="4" required></textarea>
 
                         <div class="btnsubmit" style="text-align: right;">
-                            <button type="submit" onclick="myFunction()">Submit</button>
+                            <button type="submit" onclick="submitForm()">Submit</button>
                         </div>
                     </form>
 
                     <div class="list-attendance">
-
+                        <h4>Daftar Kehadiran:</h4>
+                        <section id="attendance-list">
+                            
+                        </section>
                     </div>
 
                 </div>
             </div>
-
-            <footer>
-                <h1>footer</h1>
-            </footer>
-
         </main>
 
-
+        <footer>
+            <section>
+                <p>Thank You</p>
+                <img src="./assets/icon/brides-name.png">
+                <p>The Big Family of</p>
+                <p>Lord Montague & Lady Montague</p>
+                <p>Lord Capulet & Lady Capulet</p>
+            </section>
+        </footer>
 
         <script src="./src/js/js.js"></script>
     </body>
