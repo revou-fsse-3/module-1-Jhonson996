@@ -1,3 +1,7 @@
+@import url(nav-style.css);
+@import url(dekstop-style.css) only screen and (min-width: 961px);
+@import url(mobile-style.css) only screen and (max-width: 960px);
+
 * {
     margin: 0;
     padding: 0;
@@ -7,105 +11,7 @@ audio{
     display: none;
 }
 
-/* grid */
-    body{
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: auto auto;
-    }
-
-    aside{
-        grid-row: 1/2;
-    }
-
-    main{
-        grid-column: 2/3;
-    }
-
-    footer{
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-/* Navigasi */
-    header {
-        z-index: 1;
-        width: 20rem; 
-        height: 100%;
-        background-color: rgba(241,195,195, .8);
-        position: fixed;
-        top: 0;
-        left: -20rem; 
-        transition: left 0.3s;
-    }   
-
-    nav {
-        margin-top: 10vh;
-        width: 100%;
-    }
-
-    nav p{
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 10px;
-        text-decoration: underline;
-    }   
-
-    nav ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    nav ul li {
-        padding: 1rem  1.8rem;
-        margin: 0 .2rem;
-    }
-    
-    nav ul li a {
-        color: black;
-        text-decoration: none;
-        font-size: 1.7rem;
-    }
-
-    nav ul li:hover{
-        text-shadow: 2px 2px 4px grey;
-        font-weight: 800;
-        background-color: rgba(232,75,108, .5);
-        border-left-style: solid;
-    }
-
-    #btn-nav {
-        width: 90px;
-        margin: 10px 0 0 10px;
-        padding: 10px;
-        display: flex;
-        color: black;
-        font-weight: 800;
-        background-color: rgba(255,255,255,.5);
-        border-radius: 10px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        cursor: pointer;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-
-    #btn-nav img{
-        margin: 0 5px;
-    }
-
-/* image left */
-    .imgleft{
-        display: grid;
-        grid-area: header;
-        max-width : 60%;
-        min-height: 100vh;
-        position: fixed;
-        overflow: hidden;
-    }
-    
+/* img left side */
     .imgleft img{
         max-width: 100%;
         height: 100%;
@@ -118,7 +24,8 @@ audio{
         display: grid;
         background-color: rgba(241,195,195);
     }
-    /* BG COLOR */
+    
+/* BG COLOR */
     .collection, .formm{
         background: linear-gradient(to top, rgba(0,0,0,0) 50%, rgba(255,220,218,1));
     }
@@ -149,17 +56,14 @@ audio{
 /* Background image top and bottom */
     .content {
         background-image: url("../../assets/002.png") ;
-        background-size: 15vw;
         background-repeat: no-repeat;
         background-position: top left;
     }
 
     .bride{
         background-image: url("../../assets/001.png") ;
-        background-size: 17vw;
         background-repeat: no-repeat;
         background-position: bottom  right;
-        
     }
 
 /* class bride */
@@ -333,12 +237,10 @@ audio{
 
 /* list attendance */
     .list-attendance{
+		display: none;
         margin-top: 30px;
-        display: flex;
-        width: 80%;
-        align-items: left;
-        justify-content: left;
-        flex-direction: column;
+        max-width: 80%;
+		flex-direction: column;
         padding: 15px;
         border-radius: 5px;
         background: rgba(255, 255, 255, 0.6);
@@ -346,26 +248,52 @@ audio{
     }
 
     #attendance-list {
+		max-width: 100%;
         height: auto;
         box-sizing: border-box;
         display: flex;
         margin-top: 1rem;
-        /* align-items: left; */
-        /* justify-content: left; */
-        flex-direction: column;
-        justify-content: flex-start;
-        /* padding: 3rem 0; */
+        flex-direction: row;
+		flex-wrap: wrap;
+        /* justify-content: space-around; */
     }
 
+    .list-attend{
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+		padding: 10px;
+		background-color :rgba(255,220,218,1);
+		border-radius: 10px;
+        height: auto;
+        /* overflow: scroll; */
+	}
+
+    
+    .list-attend p{
+        margin: 2px 0;
+        text-align: center;
+        font-weight: 600;
+        font-style: italic;
+        border-bottom-style: solid;
+        border-color: grey;
+    }
+
+	.name-attend{
+		font-weight: 900;
+        border-bottom-style: solid;
+        border-color: grey;
+	}
+	
+	.wishes-attend{
+        font-style: italic;
+	}
 
 /* Footer */
     footer{
         display: inline;
-        height: 50vh;
+        /* height: 50vh; */
         background-color: rgba(241,195,195);
-        /* align-items: center;
-        justify-content: center;
-        flex-direction: column; */
     }
 
     footer section{
@@ -373,109 +301,11 @@ audio{
         box-sizing: border-box;
         padding:  2rem;
         width: 100%;
-        position: relative;
-        top: 25%;
         margin: auto;
         text-align: center;
     }
 
-    footer img{
-        width: 20vw;
-        margin: 1rem 0;
-    }
-
     footer p{
-        font-size: 1.2vw;
         margin-bottom: .5rem;
-        text-align: center;
     }
 
-
-
-/* Max-width 960 */
-    @media (max-width: 960px) {
-    *{
-        font-size: 14px;
-    }
-
-    body{
-        display: flex;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Grid to Flex */
-        main{
-            display: flex;
-            flex-direction: column;
-        }
-
-    /* nav */
-        nav ul li {
-            font-size: 2rem;
-            padding: 0.2rem;
-            margin-left: 1rem;
-        }
-
-        #btn-nav{
-            width: 50px;
-        }
-
-        #btn-nav span{
-            display: none;
-        }
-
-    /* side left */
-        .imgleft{
-            clear: both;
-            max-width : 100%;
-            margin: auto;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(to bottom, rgba(0,0,0,0) 5%, rgba(241,195,195,1));
-        }
-        
-        aside img{
-            z-index: -1;
-        }
-
-        .content, .bride{
-            background-size: 14em;
-        }
-
-    /* general */
-        .sub-title{
-            text-align: center;
-            font-weight: 500;
-            font-size: 1.5rem;
-        }
-
-    /* width and height */
-        .content{
-            width : 100%;
-        }
-
-        .maps{
-            height: 60vh;
-        }
-
-        .formm{
-            height: auto;
-            padding: 3rem 0;
-        }
-
-    /* footer */
-        footer{
-            padding: 0 10% ;
-        }
-
-        footer img{
-            width: 50vw;
-            margin: 1rem 0;
-        }
-    
-        footer p{
-            font-size: 3vw;
-        }
-}

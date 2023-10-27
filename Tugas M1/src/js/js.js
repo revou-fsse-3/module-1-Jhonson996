@@ -28,44 +28,55 @@ menuItems.forEach((item) => {
 });
 
 
-
-
-
-// tes
+// Submit form
 function submitForm() {
     // Mendapatkan nilai dari inputan
-    var fullName = document.getElementById("full_name").value;
-    var attendance = document.querySelector('input[name="attendance"]:checked').value;
-    var wishes = document.getElementById("wishes").value;
+		var fullName = document.getElementById("full_name").value;
+		var attendance = document.querySelector('input[name="attendance"]:checked').value;
+		var wishes = document.getElementById("wishes").value;
+	
+	//unhide text attendance
+		var list = document.getElementById("list");
+		if (window.getComputedStyle( list ).display === "none") {
+			list.style.display = "flex";
+		}
+	
 
-    // Membuat elemen div pembungkus untuk menampilkan hasil input
-    var listDiv = document.createElement("div");
-    listDiv.className = "list-attendance";
-    
-    // Membuat elemen untuk menampilkan hasil input
-    var listItem0 = document.createElement("div");
-    listItem0.className = "nama-attend";
-    listItem0.innerHTML = fullName;
+	// elemen untuk menampilkan hasil input
+		var listItem0 = document.createElement("div");
+		listItem0.className = "name-attend";
+		listItem0.innerHTML = fullName;
 
-    var listItem1 = document.createElement("div");
-    listItem1.className = "attend-y-n";
-    listItem1.innerHTML = "Attendance : " + attendance;
+		var listItem2 = document.createElement("p");
+		listItem2.innerHTML = "Wishes : ";
 
-    var listItem2 = document.createElement("div");
-    listItem2.className = "wishes-attend";
-    listItem2.innerHTML = "Wishes : " + wishes;
+		var listItem3 = document.createElement("div");
+		listItem3.className = "wishes-attend";
+		listItem3.innerHTML = wishes;
 
-    // Menambahkan elemen-elemen ke dalam div pembungkus
-    listDiv.appendChild(listItem0);
-    listDiv.appendChild(listItem1);
-    listDiv.appendChild(listItem2);
+            // untuk Attend yes or no tidak di tampilkan
+            var listItem1 = document.createElement("div");
+            listItem1.className = "attend-y-n";
+            listItem1.innerHTML = attendance;
 
-  // Menambahkan div pembungkus ke daftar kehadiran
-    var attendanceList = document.getElementById("attendance-list");
-    attendanceList.appendChild(listDiv);
+    // Membuat div untuk menampilkan hasil input
+		var listDiv = document.createElement("div");
+		listDiv.className = "list-attend";
 
-    alert(`Thank you, ${fullName}! For your Attendance.`);
 
-    // Reset formulir
-    document.getElementById("attendance-form").reset();
+	// Menambahkan elemen-elemen ke dalam div pembungkus
+		listDiv.appendChild(listItem0);
+		// listDiv.appendChild(listItem1);
+		listDiv.appendChild(listItem2);
+		listDiv.appendChild(listItem3);
+
+	// Menambahkan list div  ke daftar kehadiran
+		var attendanceList = document.getElementById("attendance-list");
+		attendanceList.appendChild(listDiv);
+
+	alert(`Thank you, ${fullName}! For your Participation.`);
+	
+	// Reset formulir
+	document.getElementById("attendance-form").reset();
+	
   }
