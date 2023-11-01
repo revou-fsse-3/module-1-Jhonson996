@@ -9,17 +9,14 @@ btnNav.addEventListener('click', () => {
     }
 });
 
-// Function to open the navigation bar
 function openNavBar() {
     headerNav.style.left = '0';
 }
 
-// Function to close the navigation bar
 function closeNavBar() {
     headerNav.style.left = '-20rem';
 }
 
-// Close the navigation bar when a menu item is clicked
 const menuItems = document.querySelectorAll('nav a');
 menuItems.forEach((item) => {
     item.addEventListener('click', () => {
@@ -35,7 +32,7 @@ function submitForm() {
 		var attendance = document.querySelector('input[name="attendance"]:checked').value;
 		var wishes = document.getElementById("wishes").value;
 	
-	//unhide text attendance
+	//unhide text 
 		var list = document.getElementById("list");
 		if (window.getComputedStyle( list ).display === "none") {
 			list.style.display = "flex";
@@ -50,7 +47,7 @@ function submitForm() {
 		var listItem2 = document.createElement("p");
 		listItem2.innerHTML = "Wishes : ";
 
-		var listItem3 = document.createElement("div");
+		var listItem3 = document.createElement("p");
 		listItem3.className = "wishes-attend";
 		listItem3.innerHTML = wishes;
 

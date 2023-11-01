@@ -1,12 +1,25 @@
+
 @import url(nav-style.css);
 @import url(dekstop-style.css) only screen and (min-width: 961px);
 @import url(mobile-style.css) only screen and (max-width: 960px);
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+
+/* @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw9aXpsog.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  } */
+
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat' !important;
 }
+
 audio{
     display: none;
 }
@@ -17,6 +30,7 @@ audio{
         height: 100%;
         object-fit: cover;
         filter: brightness(90%);
+        
     }
 
 /*Right side*/
@@ -27,15 +41,16 @@ audio{
     
 /* BG COLOR */
     .collection, .formm{
-        background: linear-gradient(to top, rgba(0,0,0,0) 50%, rgba(255,220,218,1));
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(255,220,218,1));
     }
 
     .bride-quote, .maps{
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 1%, rgba(255,220,218,1));
+        background: linear-gradient(to bottom, rgba(0, 255, 85, 0) 1%, rgba(255,220,218,1));
     }
 
 /* tiap tab View height 100% */
     .bride, .bride-quote, .maps{
+        max-width: 100%;
         height: 100vh;
         padding: 0 10%;
         display: flex;
@@ -55,13 +70,13 @@ audio{
 
 /* Background image top and bottom */
     .content {
-        background-image: url("../../assets/002.png") ;
+        background-image: url("../../assets/002-min.png") ;
         background-repeat: no-repeat;
         background-position: top left;
     }
 
     .bride{
-        background-image: url("../../assets/001.png") ;
+        background-image: url("../../assets/001-min.png") ;
         background-repeat: no-repeat;
         background-position: bottom  right;
     }
@@ -287,6 +302,8 @@ audio{
 	
 	.wishes-attend{
         font-style: italic;
+        overflow-wrap: break-word;
+        /* word-wrap: break-word; */
 	}
 
 /* Footer */

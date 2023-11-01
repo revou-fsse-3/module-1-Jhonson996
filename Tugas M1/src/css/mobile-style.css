@@ -1,5 +1,7 @@
 /* Max-width 960 */
-    @media (max-width: 960px) {
+ @media (max-width: 960px) {
+    
+    
     *{
         font-size: 14px;
     }
@@ -31,8 +33,8 @@
         }
 
     /* side left */
-        .imgleft{
-            clear: both;
+        aside{
+            display: flex;
             max-width : 100%;
             margin: auto;
             height: 100vh;
@@ -40,7 +42,7 @@
             overflow: hidden;
             background: linear-gradient(to bottom, rgba(0,0,0,0) 5%, rgba(241,195,195,1));
         }
-
+        
         aside img{
             z-index: -1;
         }
