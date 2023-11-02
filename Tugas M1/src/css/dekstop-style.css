@@ -51,13 +51,8 @@
 
 /* footer */
     footer{
-        display: inline;
+        display: flex;
         height: 50vh;
-    }
-
-    footer section{
-        position: relative;
-        top: 25%;
     }
 
     footer img{

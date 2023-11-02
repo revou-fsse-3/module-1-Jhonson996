@@ -35,7 +35,7 @@
     /* side left */
         aside{
             display: flex;
-            max-width : 100%;
+            min-width : 100%;
             margin: auto;
             height: 100vh;
             position: relative;
@@ -45,6 +45,7 @@
         
         aside img{
             z-index: -1;
+            width: 100%;
         }
 
         .content, .bride{
