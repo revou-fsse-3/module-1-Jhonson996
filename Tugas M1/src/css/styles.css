@@ -4,25 +4,38 @@
 @import url(mobile-style.css) only screen and (max-width: 960px);
 
 @font-face {
-    font-family: 'test';
+    font-family: 'Font-montserrat';
     src: 
-    /* url(../../assets/font/Montserrat-VariableFont_wght.ttf), */
+    url(../../assets/font/Montserrat-VariableFont_wght.ttf),
     url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
+    font-display: swap;
   }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'test';
+    font-family: 'Font-montserrat', sans-serif;
     font-weight: 400;
+    scroll-behavior: smooth;
 }
 
 audio{
     display: none;
 }
 
+body{
+    background-image: linear-gradient(to bottom,
+    rgba(255,220,218, 1), 
+    rgba(0,0,0, .1), 
+    rgba(241,195,195,.8),
+    rgba(255,220,218, 1), 
+    rgba(0,0,0, .1), 
+    rgba(241,195,195,.8)
+    );
+}
+
 /* img left side */
-    .imgleft img{
+    aside img{
         max-width: 100%;
         height: 100%;
         object-fit: cover;
@@ -32,16 +45,6 @@ audio{
 /*Right side*/
     .content{
         display: grid;
-        background-color: rgba(241,195,195);
-    }
-    
-/* BG COLOR */
-    .collection, .formm{
-        background: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(255,220,218,1));
-    }
-
-    .bride-quote, .maps{
-        background: linear-gradient(to bottom, rgba(0, 255, 85, 0) 1%, rgba(255,220,218,1));
     }
 
 /* tiap tab View height 100% */
@@ -59,20 +62,21 @@ audio{
     .sub-title{
         text-align: center;
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 1rem;
         text-decoration: underline;
     }
 
 /* Background image top and bottom */
-    .content {
-        background-image: url("../../assets/002-min.png") ;
+    .content{
+        background-image: url("../../assets/002-min.webp") ;
         background-repeat: no-repeat;
         background-position: top left;
+        background-size: 15vw;
     }
 
     .bride{
-        background-image: url("../../assets/001-min.png") ;
+        background-image: url("../../assets/001-min.webp") ;
         background-repeat: no-repeat;
         background-position: bottom  right;
     }
@@ -173,13 +177,31 @@ audio{
     .maps p:nth-last-child(1){
         margin-top: 2rem;
         font-size: 2rem;
-        font-weight: bolder;
+        font-weight: 500;
     }
 
     .frame{
         border: 0;
         box-shadow: 4px 4px 15px rgb(79, 79, 79) ;
     }
+
+    #map-container {
+        position: relative;
+        width:90%;
+        height:50%;
+      }
+
+    #map-placeholder {
+        width: 90%;
+        height: 40%;
+        background-color: rgba(0, 0, 0, .3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+
 
 /* Form Attendance */
     .formm{

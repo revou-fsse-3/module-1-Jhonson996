@@ -24,6 +24,19 @@ menuItems.forEach((item) => {
     });
 });
 
+// munculin placeholder dulu
+document.addEventListener("DOMContentLoaded", function () {
+	var mapIframe = document.getElementById("google-map");
+	var mapPlaceholder = document.getElementById("map-placeholder");
+
+	mapIframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9988.829689203925!2d73.08999453450154!3d-0.6071675965626031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x24b59f84718a48af%3A0x245be39225de10cd!2sHithadhoo%20Swimming%20Track!5e0!3m2!1sen!2sid!4v1697728202681!5m2!1sen!2sid";
+
+	mapIframe.onload = function () {
+	  mapPlaceholder.style.display = "none";
+	};
+  });
+
+
 
 // Submit form
 function submitForm() {
@@ -77,3 +90,5 @@ function submitForm() {
 	document.getElementById("attendance-form").reset();
 	
   }
+
+
